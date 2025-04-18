@@ -8,42 +8,54 @@ public class AddressBuilderApp {
 
         Scanner address = new Scanner(System.in);
 
-        //ask user for the full name
-        System.out.println("What is your full name?: ");
-        String fullName = address.nextLine();
-        String[] nameParts = fullName.trim().split(" ");
-        String formattedName;
+        StringBuilder billingAddress = new StringBuilder();
+        StringBuilder shippingAddress = new StringBuilder();
 
-        if (nameParts.length >= 2){
-            String firstName = nameParts[0];
-            String lastName = nameParts[nameParts.length -1];
-            formattedName = lastName + ", " + firstName;
-        } else {
-            formattedName = fullName;
-        }
+        //ask user for billing info
+        System.out.println("Billing Address:");
+        System.out.println("Name: ");
+        billingAddress.append(address.nextLine()).append("\n");
 
-        //ask user for the street name
         System.out.println("Street: ");
-        String streetName = address.nextLine();
+        billingAddress.append(address.nextLine()).append("\n");
 
-        //ask user for the city name
         System.out.println("City: ");
-        String cityName = address.nextLine();
+        String city = address.nextLine();
 
-        //ask user for the state name
         System.out.println("State:");
-        String
+        String state = address.nextLine();
 
-        //ask user for the zipcode
-        System.out.println("");
+        System.out.println("Zipcode: ");
+        String zip = address.nextLine();
+
+        billingAddress.append(city).append(", ").append(state).append(" ").append(zip).append("\n");
+
+        //ask the user for shipping info
+        System.out.println("Shipping Address:");
+        System.out.println("Name: ");
+        shippingAddress.append(address.nextLine()).append("\n");
+
+        System.out.println("Street: ");
+        shippingAddress.append(address.nextLine()).append("\n");
+
+        System.out.println("City: ");
+        city = address.nextLine();
+
+        System.out.println("State");
+        state = address.nextLine();
+
+        System.out.println("Zipcode: ");
+        zip = address.nextLine();
+
+        shippingAddress.append(city).append(", ").append(state).append(" ").append(zip).append("\n");
 
 
-
-        //ask the user for the shipping street name
-        //ask the user for the shipping city name
-        //ask the user for the shipping state name
-        //ask the user for the shipping zipcode
-
+        //Display the fully formatted addresses
+        System.out.println("     Billing Address\n");
+        System.out.println(billingAddress.toString());
+        System.out.println("============================\n");
+        System.out.println("     Shipping Address\n");
+        System.out.println(shippingAddress.toString());
 
     }
 
