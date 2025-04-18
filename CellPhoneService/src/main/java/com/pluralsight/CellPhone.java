@@ -18,8 +18,10 @@ public class CellPhone {
         this.phoneNumber = "";
         this.owner = "";
     }
-
-
+    //method to make a phone dial a phone number
+    public void dial(String phoneNumber){
+        System.out.println(this.getOwner() + "'s phone is calling " + phoneNumber);
+    }
 
     //getter and setters are below this comment
     public int getSerialNumber() {
