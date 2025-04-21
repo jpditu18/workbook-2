@@ -32,6 +32,8 @@ public class CellPhoneApplication {
         myPhone.setPhoneNumber(phoneNumber);
         myPhone.setOwner(owner);
 
+        CellPhone burnerPhone = new CellPhone(4444, "Samsung Galaxy", "MetroPCS", "817-353-2453", "Uncle Ruckus");
+
         //use the getters to display this information
      //   System.out.println("SN: " + myPhone.getSerialNumber());
      //   System.out.println("Model: " + myPhone.getModel());
@@ -39,9 +41,9 @@ public class CellPhoneApplication {
      //   System.out.println("Phone Number: " + myPhone.getPhoneNumber());
      //   System.out.println("Owner: " + myPhone.getOwner());
 
-        CellPhone burnerPhone = new CellPhone();
-        burnerPhone.setPhoneNumber("817-353-2453");
-        burnerPhone.setOwner("Uncle Ruckus");
+    //    CellPhone burnerPhone = new CellPhone();
+    //    burnerPhone.setPhoneNumber("817-353-2453");
+    //    burnerPhone.setOwner("Uncle Ruckus");
 
         System.out.println("---------info for myPhone--------");
         //Display my phone
